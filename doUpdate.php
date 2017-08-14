@@ -16,7 +16,12 @@ $result['message'] = 'Product price must be filled';
 	$result['message'] = 'Product description must be filled';
 }else {
 
-	// $query ="UPDATE product SET productName='".$productName."' ,productDescription='".$productDescription."',productPrice='".$productPrice."' WHERE productId='$productId'";
+
+
+// TU JEST WIELKI PROBLEM !!!!! :) CZEMU JAK NA SZTYWNO PRODUCT ID TO UPDEJTYUJE BAZE DANYCH, A JEZELI DAJE ZMIENNA TO NIC NIE ROBI MIMO ZE KOMUNUKAT ZE DODANO DO BAZY DANYCH
+
+	// $query1 ="UPDATE `product` SET `productName` = '".$productName."', `productDescription` = '".$productDescription."', `productPrice` = '".$productPrice."' WHERE productId=1";
+
 
 	$query1 ="UPDATE `product` SET `productName` = '".$productName."', `productDescription` = '".$productDescription."', `productPrice` = '".$productPrice."' WHERE productId='.$productId.'";
 
