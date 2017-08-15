@@ -1,11 +1,12 @@
 <?php 
 
+
 include 'database.php';
 
-$productId = $_POST['productId'];
+$id = $_POST['id'];
 $result = array();
 
-$query = "SELECT * FROM product WHERE productId =".$productId;
+$query = "SELECT * FROM persons WHERE id ='$id'";
 $queryResult = $connect->query($query);
 
 $fetchData =$queryResult->fetch_assoc();
